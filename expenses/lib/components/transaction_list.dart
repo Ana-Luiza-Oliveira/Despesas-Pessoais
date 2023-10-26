@@ -19,7 +19,6 @@ class TransactionList extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(
                   'Nenhuma Transação Cadastrada!',
-                  // ignore: deprecated_member_use
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 const SizedBox(height: 20),
@@ -44,7 +43,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: Colors.purple,
+                      backgroundColor: Color.fromARGB(255, 255, 0, 0),
                       radius: 30,
                       child: Padding(
                         padding: const EdgeInsets.all(6),
@@ -52,7 +51,7 @@ class TransactionList extends StatelessWidget {
                           child: Text(
                             'R\$${tr.value}',
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 0, 0, 0),
                             ),
                           ),
                         ),
@@ -60,7 +59,6 @@ class TransactionList extends StatelessWidget {
                     ),
                     title: Text(
                       tr.title,
-                      // ignore: deprecated_member_use
                       style: Theme.of(context).textTheme.headline6,
                     ),
                     subtitle: Text(
@@ -68,7 +66,6 @@ class TransactionList extends StatelessWidget {
                     ),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
-                      // ignore: deprecated_member_use
                       color: Theme.of(context).errorColor,
                       onPressed: () => onRemove(tr.id),
                     ),

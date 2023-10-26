@@ -97,7 +97,6 @@ class _TransactionFormState extends State<TransactionForm> {
                   child: Text(
                     'Nova Transação',
                     style: TextStyle(
-                      // ignore: deprecated_member_use
                       color: Theme.of(context).textTheme.button?.color,
                     ),
                   ),

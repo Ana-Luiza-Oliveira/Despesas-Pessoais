@@ -1,7 +1,6 @@
 import 'package:expenses/components/transaction_form.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
-// ignore: duplicate_import
 import 'components/transaction_form.dart';
 import 'components/transaction_list.dart';
 import 'components/chart.dart';
@@ -14,23 +13,21 @@ class ExpensesApp extends StatelessWidget {
   final ThemeData tema = ThemeData();
 
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: const MyHomePage(),
-      theme: tema.copyWith( 
+      theme: tema.copyWith(
         colorScheme: tema.colorScheme.copyWith(
-          primary: Colors.purple,
-          secondary: Colors.amber,
+          primary: Color.fromARGB(255, 255, 0, 0),
+          secondary: Color.fromARGB(255, 255, 142, 142),
         ),
         textTheme: tema.textTheme.copyWith(
-          // ignore: deprecated_member_use
           headline6: const TextStyle(
             fontFamily: 'OpenSans',
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
-          // ignore: deprecated_member_use
           button: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -47,7 +44,7 @@ class ExpensesApp extends StatelessWidget {
     );
   }
 }
- 
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -100,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Despesas Pessoais'),
+        title: const Text('Minhas Despesas'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
